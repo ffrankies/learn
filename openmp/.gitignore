@@ -1,0 +1,3 @@
+# Ignore executables
+*.o
+value_of_pi
