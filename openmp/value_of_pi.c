@@ -1,11 +1,7 @@
 /*
  * Estimating the value of Pi using the circle-in-square method.
  */
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
-#include <omp.h>
-#include <time.h>
+#include "common.h"
 
 int N_ATTEMPTS = 10000000;
 int N_THREADS = 4;
