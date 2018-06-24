@@ -37,7 +37,7 @@ void parallel_impl() {
     clock_t start = clock();
     omp_set_num_threads(N_THREADS);
     double n_in_circle = 0;
-    #pragma omp parallel for shared(n_in_circle)
+    #pragma omp parallel for reduction(+: n_in_circle)
     for (int n = 0; n < N_ATTEMPTS; ++n) {  // The number of loops is automatically split b/n all threads
         if (random() < 10000) {  // Show that for loop is executing in parallel
             printf("n = %d, current thread = %d\n", n, omp_get_thread_num());
@@ -45,7 +45,7 @@ void parallel_impl() {
         double x = random() / (double) RAND_MAX;
         double y = random() / (double) RAND_MAX;
         if (x * x + y * y < 1) {
-            #pragma omp critical
+            // #pragma omp critical - no longer needed, because with reduction, a local copy is created for each thread
             n_in_circle++;
         }
     }
