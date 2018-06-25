@@ -6,4 +6,4 @@ value_of_pi: value_of_pi.c common.h
 array_proc: array_proc.c common.h
 	gcc -fopenmp array_proc.c -o array_proc
 	./array_proc
-	rm ./value_of_pi
+	rm ./array_proc
