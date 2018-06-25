@@ -9,7 +9,7 @@ int N_THREADS = 8;
 
 /**
  * Initializes a 2d array, where each element = i * j
- * @param double * array - the array to be initialized
+ * @param double [][ARR_SIZE] array - the array to be initialized
  */
 void init_2d_array(double array[][ARR_SIZE]) {
     for (int row = 0; row < ARR_SIZE; ++row) {
