@@ -10,10 +10,10 @@ int main(int argc, char* argv[]) {
     MPI_Comm_rank(MPI_COMM_WORLD, &taskid);
     MPI_Get_processor_name(host, &hostnamelen);
     
-    printf("Hello World! I'm task %d, running on host %s", taskid, host);
+    printf("Hello World! I'm task %d, running on host %s\n", taskid, host);
 
     if (taskid == MASTER_TASK) {
-        printf("I'm the master task. There are %d tasks running.", numtasks);
+        printf("I'm the master task. There are %d tasks running.\n", numtasks);
     }
 
     MPI_Finalize();
