@@ -5,5 +5,5 @@ hello_world: ./hello_world/hello_world.c ./hello_world/hello_world.h
 
 blocking: ./blocking/blocking.c ./blocking/blocking.h
 	mpicc ./blocking/blocking.c -o ./blocking/blocking.o
-	mpirun -np 2 ./blocking/blocking.o
+	mpirun -np 8 ./blocking/blocking.o
 	rm ./blocking/blocking.o
