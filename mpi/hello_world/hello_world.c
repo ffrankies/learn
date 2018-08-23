@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
     if (taskid == MASTER_TASK) {
         printf("I'm the master task. There are %d tasks running.\n", numtasks);
     }
-
+    
     MPI_Finalize();
 
 }
